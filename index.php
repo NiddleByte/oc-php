@@ -1,5 +1,17 @@
 <html>
 <head> Hello World ! php </head>
   <h1> This is Updated code </h1>
-  <h2> IP :<?php echo exec("/sbin/ifconfig en1 | grep 'inet ' | cut -d ' ' -f2"); ?></h2>
+  <h2> IP :
+<?php 
+  
+// Declaring a variable to hold the IP 
+// address getHostName() gets the name 
+// of the local machine getHostByName() 
+// gets the corresponding IP 
+$localIP = getHostByName(getHostName()); 
+  
+// Displaying the address  
+echo $localIP; 
+  
+?> </h2>
 </html>
